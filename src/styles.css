@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  padding: 20px;
+  margin: 20px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px
+}
+
+.clicked {
+  color: red
+}
+
+.main,
+header nav {
+  width: 75%;
+  margin: 32px auto;
+}
+
+header nav a {
+  color: #233dcb;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px;
+}
+
+header nav a:hover,
+header nav a:active {
+  color: #41abf2;
+}
+
+.pipes {
+  margin: 32px 0;
+  padding: 16px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}

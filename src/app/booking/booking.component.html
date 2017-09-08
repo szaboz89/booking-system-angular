@@ -1,0 +1,18 @@
+<div>
+    <div>
+        <label for="name">Booking Name:</label>
+        <input [(ngModel)]="booking.name" type="text" id="name"/>
+    </div>
+    <div>
+        <label for="itemName">Item Name:</label>
+        <input [(ngModel)]="booking.item.name" type="text" id="itemName"/>
+    </div>
+    <div>
+        <label for="start">Booking start: </label>
+        <input [ngModel]="booking.startTime | date:'short'" type="text" id="start"/>
+    </div>
+    <div>
+        <label for="end">Booking end</label>
+        <input [ngModel]="booking.endTime | date:'short'" type="text" id="end"/>
+    </div>
+</div>

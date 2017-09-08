@@ -1,0 +1,18 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <div>
+        <label for="name">Item name:</label>
+        <input type="text" id="name"
+               #firstName="ngForm"
+               [formControl]="myForm.controls['name']"
+        />
+    </div>
+    <div>
+        <label for="itemDesc">Item description:</label>
+        <input type="text" id="itemDesc"
+               [formControl]="myForm.controls['description']"
+        />
+    </div>
+    <button type="submit" [disabled]="!myForm.valid">
+        Create Item
+    </button>
+</form>

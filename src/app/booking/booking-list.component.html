@@ -1,0 +1,14 @@
+<h3>Add new booking</h3>
+<new-booking (updated)="updateList($event)"></new-booking>
+<h3>List of bookings</h3>
+<ul>
+    <li
+            *ngFor="let booking of bookings"
+            (click)="onSelect(booking)"
+            [class.clicked]="selectedBooking === booking"
+    >
+        {{booking.item.name}}: {{booking.name }},
+        Duration: {{ booking.startTime | date:'short'}} - {{ booking.endTime | date:'short'}}
+    </li>
+</ul>
+<booking *ngIf="selectedBooking !== null" [booking]="selectedBooking">></booking>

@@ -1,0 +1,13 @@
+<h3>Add new item</h3>
+<new-item (updated)="updateList($event)"></new-item>
+<h3>List of items</h3>
+<ul>
+    <li
+            *ngFor="let item of items"
+            (click)="onSelect(item)"
+            [class.clicked]="selectedItem === item"
+    >
+        {{item.name}} ({{ item.description }})
+    </li>
+</ul>
+<item *ngIf="selectedItem !== null" [item]="selectedItem"></item>
